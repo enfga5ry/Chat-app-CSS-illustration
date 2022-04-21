@@ -1,0 +1,347 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hsl(270, 20%, 96%);
+  padding: 280px;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 1250px) {
+  .container {
+    padding: 200px;
+  }
+}
+@media (max-width: 1070px) {
+  .container {
+    padding: 100px;
+  }
+}
+@media (max-width: 850px) {
+  .container {
+    flex-direction: column;
+    padding: 50px;
+    height: auto;
+  }
+}
+@media (max-width:375px ) {
+  .container {
+    padding: 50px 30px;
+  }
+}
+.container::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 1000px;
+  top: -50%;
+  left: -150px;
+  border-radius: 250px;
+  background-image: linear-gradient(
+    to left,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+  -webkit-border-radius: 250px;
+  -moz-border-radius: 250px;
+  -ms-border-radius: 250px;
+  -o-border-radius: 250px;
+}
+.container::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 1000px;
+  bottom: -50%;
+  right: -150px;
+  background-color: #eee;
+  border-radius: 250px;
+  -webkit-border-radius: 250px;
+  -moz-border-radius: 250px;
+  -ms-border-radius: 250px;
+  -o-border-radius: 250px;
+}
+@media (max-width: 850px) {
+  .container::after {
+    display: none;
+  }
+  .container::before {
+    left: -250px;
+  }
+}
+@media (max-width:375px) {
+  .container::before {
+    left: -325px;
+  }
+}
+.container .mobile {
+  width: 300px;
+  z-index: 4;
+  height: 555px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  overflow: hidden;
+  background-color: hsl(270, 20%, 96%);
+  border: 16px solid white;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.container .mobile header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 15px 12px;
+  background-image: linear-gradient(
+    to left,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+  color: white;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  position: relative;
+}
+.container .mobile header::before {
+  content: "";
+  background-color: white;
+  position: absolute;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  width: 60%;
+  height: 100px;
+  top: -75px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  z-index: 5;
+}
+.container .mobile header .title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.container .mobile header .title img {
+  width: 30px;
+  border: 2px solid white;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin-right: 5px;
+}
+.container .mobile header .title .pref h2 {
+  font-size: 14px;
+  font-weight: 500;
+}
+.container .mobile header .title .pref p {
+  font-size: 10px;
+  margin-top: 3px;
+  color: hsl(276, 100%, 81%);
+}
+.container .mobile > p {
+  width: fit-content;
+  max-width: 60%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin: 0 10px;
+  padding: 5px 10px;
+  line-height: 1.3;
+}
+.container .mobile > p.left {
+  color: hsl(276, 55%, 52%);
+  background-color: #eee;
+}
+.container .mobile > p.right {
+  color: hsl(271, 15%, 43%);
+  background-color: white;
+  display: flex;
+  align-self: flex-end;
+}
+.container .mobile .images {
+  display: flex;
+  align-self: flex-end;
+  margin: 0 10px;
+}
+.container .mobile .images div {
+  border-radius: 10px;
+  margin: 0 5px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  overflow: hidden;
+  width: 50px;
+}
+.container .mobile .images div img {
+  max-width: 100%;
+}
+.container .mobile form {
+  width: 100%;
+}
+.container .mobile form .optin {
+  background-image: linear-gradient(
+    to right,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 10px;
+  margin: 0 10px 10px;
+  color: white;
+}
+.container .mobile form .optin input[type="radio"] {
+  display: none;
+}
+.container .mobile form .optin label {
+  position: relative;
+  margin-left: 20px;
+}
+.container .mobile form .optin label:hover {
+  cursor: pointer;
+}
+.container .mobile form .optin label::before {
+  content: "";
+  outline: 2px solid hsl(289, 100%, 72%);
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  left: -20px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.container .mobile form .optin label::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(137, 28, 101);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  left: -17.5px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.container .mobile form .optin label:hover:after {
+  opacity: 0.2;
+}
+.container .mobile form .optin input[type="radio"]:checked ~ label::after {
+  opacity: 1;
+}
+.container .mobile form .optin span {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.container .mobile form input[type="text"] {
+  width: 90%;
+  height: 40px;
+  border: none;
+  padding: 10px;
+  margin-left: 5%;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+.container .mobile form button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: none;
+  background-color: hsl(271, 36%, 24%);
+  color: white;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 10px;
+  top: -35px;
+  left: 220px;
+  cursor: pointer;
+}
+.container .text {
+  flex-basis: 50%;
+  z-index: 3;
+}
+@media (max-width:375px) {
+  .container .text {
+    margin-top: 50px;
+  }
+}
+
+.container .text h2 {
+  color: hsl(271, 36%, 24%);
+  font-size: 35px;
+  padding: 20px 0;
+}
+.container .text p {
+  color: hsl(270, 7%, 64%);
+  line-height: 1.7;
+  text-align: justify;
+}
+@media (max-width:375px) {
+  .container .text h2,
+  .container .text p {
+    text-align: center;
+  }
+}
