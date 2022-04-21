@@ -101,6 +101,13 @@ body {
   flex-direction: column;
   gap: 10px;
 }
+@media (max-width:375px) {
+  .container .mobile {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+}
+
 .container .mobile header {
   width: 100%;
   display: flex;
@@ -322,11 +329,6 @@ body {
 .container .text {
   flex-basis: 50%;
   z-index: 3;
-}
-@media (max-width:375px) {
-  .container .text {
-    margin-top: 50px;
-  }
 }
 
 .container .text h2 {
